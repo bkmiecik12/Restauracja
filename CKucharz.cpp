@@ -37,13 +37,13 @@ CKucharz::CKucharz(double dniowka) : CPracownik(dniowka) {
 
 }
 
-CKucharz::~CKucharz(): {
+CKucharz::~CKucharz() {
 
 }
 
 int CKucharz::gotuj() {
     cout << "Kucharz rozpoczyna gotowanie" << endl;
-    sleep(800);
+    sleep(1);
     cout << "Kucharz skonczyl gotowac" << endl;
     return 5;
 }

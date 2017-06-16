@@ -1,6 +1,8 @@
 #include <iostream>
+#include "CRestauracja.h"
+
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    CRestauracja speluno;
+    speluno.otworzRestauracje();
 }

@@ -7,14 +7,17 @@
 
 CKelner::~CKelner() {
 
-}
-
+}//+=
 void CKelner::wezNapiwek(double x) {
-    kieszen = x;
+    kieszen += x;
 }
 
 void CKelner::dodajReke() {
     rece++;
+}
+
+double CKelner::dajKieszen(){
+    return kieszen;
 }
 
 CKelner::CKelner() {
@@ -24,5 +27,9 @@ CKelner::CKelner() {
 CKelner::CKelner(double dniowka) : CPracownik(dniowka){
     rece = 2;
     kieszen = 0;
+}
+
+int CKelner::ileRak() {
+    return rece;
 }
 

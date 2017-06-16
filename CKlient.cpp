@@ -20,18 +20,21 @@ CKlient::~CKlient() {
 }
 
 double CKlient::zamow(CDanie danie) {
+    cout << "KLIENT " << imie << " ZAMOWIL DANIE " << danie.dajNazwe() << endl;
+    sleep(1);
+    rachunek+=danie.dajCene();
     int zarodek = rand() % 6;
-    if (zarodek <= 2)
+    if (zarodek < 2)
     {
         dajNapiwek(danie);
+        cout << "KLIENT " << this->imie << " DAL NAPIWEK "<< endl;
+        sleep(1);
     }
-    cout << "KLIENT" << this->imie << "ZAMOWIL DANIE" << danie.dajNazwe() << endl;
-    sleep(800);
     return danie.dajCene();
 }
 
-double CKlient::dajNapiwek(CDanie danie) {
-    return 0.1 * danie.dajCene();
+void CKlient::dajNapiwek(CDanie danie) {
+    kelner->wezNapiwek(danie.dajCene()*0.1);
 }
 
 string CKlient::dajImie() {

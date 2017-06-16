@@ -7,21 +7,26 @@
 
 
 #include "CPracownik.h"
+#include <iostream>
+
+using namespace std;
 
 class CKelner: public CPracownik {
 private :
-    static int rece;
+    int rece; //not static
     double kieszen;
 
 public:
 
     void wezNapiwek(double);
     void dodajReke();
+    int ileRak();
 
     CKelner();
     CKelner(double);
     ~CKelner();
 
+    double dajKieszen();
 };
 
 

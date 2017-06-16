@@ -15,7 +15,6 @@ class CKlient {
 private:
     double pieniadze;
     string imie;
-    double rachunek;
 
 public:
     CKelner *kelner;
@@ -23,8 +22,10 @@ public:
     CKlient(double pieniadze, string imie);
     ~CKlient();
     double zamow(CDanie danie);
-    double dajNapiwek(CDanie danie);
+    void dajNapiwek(CDanie danie);
     string dajImie();
+
+    double rachunek;
 };
 
 
