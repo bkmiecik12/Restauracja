@@ -27,7 +27,7 @@ void CRestauracja::losujKlienta() {
         CKlient* nowy = new CKlient(zarodek1, imiona[zarodek2]);
         nowy->kelner = przypiszKelnera();
         dodajKlienta(nowy);
-        //CKlient* obecny = klienci[temp];
+
         cout << "DO RESTAURACJI WSZEDŁ KLIENT O IMIENIU " << nowy->dajImie() << endl;
         sleep(1);
 
